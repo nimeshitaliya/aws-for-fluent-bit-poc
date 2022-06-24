@@ -1,0 +1,20 @@
+# Override the namespace to install in kube-system
+global:
+  namespaceOverride: "kube-system"
+
+# Enabled the elasticsearch and set host & awsregion of elasticsearch where log will be pushed to
+elasticsearch:
+  host: "vpc-ivari-eks-apps-logs-pukkq3matguor5r2dmjuo4m3nu.ca-central-1.es.amazonaws.com"
+  awsRegion: "ca-central-1"
+
+# Disabled the cloudWatch because by default it is enabled
+cloudWatch:
+  enabled: false
+
+# Disabled the firehose because by default it is enabled
+firehose:
+  enabled: false
+
+# Disabled the kinesis because by default it is enabled
+kinesis:
+  enabled: false
